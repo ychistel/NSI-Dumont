@@ -6,8 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: fastpages
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+title: Numérique et Science Informatique
+description: Un blog regroupant les documents réalisés avec des Jupyter Notebooks.
 github_username: ychistel
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "NSI-Dumont"
