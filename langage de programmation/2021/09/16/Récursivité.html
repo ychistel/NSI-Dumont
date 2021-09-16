@@ -4,18 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Numérique et Science Informatique | Un blog regroupant les documents réalisés avec des Jupyter Notebooks.</title>
+<title>Récursivité | Numérique et Science Informatique</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Numérique et Science Informatique" />
+<meta property="og:title" content="Récursivité" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Un blog regroupant les documents réalisés avec des Jupyter Notebooks." />
-<meta property="og:description" content="Un blog regroupant les documents réalisés avec des Jupyter Notebooks." />
-<link rel="canonical" href="https://ychistel.github.io/NSI-Dumont/" />
-<meta property="og:url" content="https://ychistel.github.io/NSI-Dumont/" />
+<meta name="description" content="Cours sur les fonctions récursives" />
+<meta property="og:description" content="Cours sur les fonctions récursives" />
+<link rel="canonical" href="https://ychistel.github.io/NSI-Dumont/langage%20de%20programmation/2021/09/16/R%C3%A9cursivit%C3%A9.html" />
+<meta property="og:url" content="https://ychistel.github.io/NSI-Dumont/langage%20de%20programmation/2021/09/16/R%C3%A9cursivit%C3%A9.html" />
 <meta property="og:site_name" content="Numérique et Science Informatique" />
-<meta property="og:image" content="https://ychistel.github.io/NSI-Dumont/images/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-16T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://ychistel.github.io/NSI-Dumont/","@type":"WebSite","image":"https://ychistel.github.io/NSI-Dumont/images/logo.png","headline":"Numérique et Science Informatique","name":"Numérique et Science Informatique","description":"Un blog regroupant les documents réalisés avec des Jupyter Notebooks.","@context":"https://schema.org"}</script>
+{"datePublished":"2021-09-16T00:00:00-05:00","url":"https://ychistel.github.io/NSI-Dumont/langage%20de%20programmation/2021/09/16/R%C3%A9cursivit%C3%A9.html","@type":"BlogPosting","headline":"Récursivité","dateModified":"2021-09-16T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ychistel.github.io/NSI-Dumont/langage%20de%20programmation/2021/09/16/R%C3%A9cursivit%C3%A9.html"},"description":"Cours sur les fonctions récursives","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/NSI-Dumont/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ychistel.github.io/NSI-Dumont/feed.xml" title="Numérique et Science Informatique" /><link rel="shortcut icon" type="image/x-icon" href="/NSI-Dumont/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -83,57 +84,81 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p>This site is built with <a href="https://github.com/fastai/fastpages">fastpages</a>, An easy to use blogging platform with extra features for Jupyter Notebooks.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<p><img src="/NSI-Dumont/images/diagram.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Récursivité</h1><p class="page-description">Cours sur les fonctions récursives</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-16T00:00:00-05:00" itemprop="datePublished">
+        Sep 16, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
-<p><a href="https://github.com/fastai/fastpages">fastpages</a> automates the process of creating blog posts via GitHub Actions, so you don’t have to fuss with conversion scripts.  A full list of features can be found on <a href="https://github.com/fastai/fastpages">GitHub</a>.</p>
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/NSI-Dumont/categories/#Langage de programmation">Langage de programmation</a>
+        
+      
+      </p>
+    
 
-<p>You can edit the <code class="language-plaintext highlighter-rouge">index.html</code> file to change this content.</p>
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
 
-<h1 id="posts">Posts</h1>
-
-
-
-  
-
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
-
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
-
- 
-  
-
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/NSI-Dumont/langage%20de%20programmation/2021/09/16/R%C3%A9cursivit%C3%A9.html">
-    Récursivité
+    <a href="https://github.com/ychistel/NSI-Dumont/tree/master/_notebooks/2021-09-16-Récursivité.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/NSI-Dumont/assets/badges/github.svg" alt="View On GitHub">
     </a>
-</h3><p class="post-meta-description">Cours sur les fonctions récursives</p><p class="post-meta">Sep 16, 2021</p>
-</li><li><h3>
-    <a class="post-link" href="/NSI-Dumont/jupyter/2021/09/07/Machine-de-Turing.html">
-    Machine de Turing
-    </a>
-</h3><p class="post-meta-description">Awesome summary</p><p class="post-meta">Sep 7, 2021</p>
-</li><li><h3>
-    <a class="post-link" href="/NSI-Dumont/jupyter/2020/02/20/test.html">
-    Fastpages Notebook Blog Post
-    </a>
-</h3><p class="post-meta-description">A tutorial of fastpages for Jupyter notebooks.</p><p class="post-meta">Feb 20, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/NSI-Dumont/markdown/2020/01/14/test-markdown-post.html">
-    An Example Markdown Post
-    </a>
-</h3><p class="post-meta-description">A minimal example of using markdown with fastpages.</p><p class="post-meta">Jan 14, 2020</p>
-</li></ul>
+</div>
 
-    </div>
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/ychistel/NSI-Dumont/master?filepath=_notebooks%2F2021-09-16-R%C3%A9cursivit%C3%A9.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/NSI-Dumont/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/ychistel/NSI-Dumont/blob/master/_notebooks/2021-09-16-Récursivité.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/NSI-Dumont/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Définition">Définition </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-09-16-Récursivité.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Définition">
+<a class="anchor" href="#D%C3%A9finition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Définition<a class="anchor-link" href="#D%C3%A9finition"> </a>
+</h2>
+<p>Une fonction récursive est une fonction qui s'appelle elle-même.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/NSI-Dumont/langage%20de%20programmation/2021/09/16/R%C3%A9cursivit%C3%A9.html" hidden></a>
+</article>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/NSI-Dumont/"></data>
