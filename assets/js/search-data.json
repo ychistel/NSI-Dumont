@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Title",
-            "content": ". title : Composer avec fastai summary : apprendre à utiliser les subtilités de cette application pour publier des notebook jupyter . - toc : true . . Attention: There will be no second warning! .",
+            "content": ". title : Composer avec fastai summary : apprendre à utiliser les subtilités de cette application pour publier des notebook jupyter . - toc : true . . Attention: There will be no second warning! &gt; Exemple:ceci est un exemple! .",
             "url": "https://ychistel.github.io/NSI-Dumont/2021/09/16/Composer-avec-fastpage.html",
             "relUrl": "/2021/09/16/Composer-avec-fastpage.html",
             "date": " • Sep 16, 2021"
