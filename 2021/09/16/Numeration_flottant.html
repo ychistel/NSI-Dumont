@@ -138,17 +138,36 @@ window.onload = wrap_img;
 <p>Dans les langages de programmation comme Python, les nombres à virgule sont appelés des flottants et se notent avec un point. Par exemple, le nombre $2,5$ se note $2.5$.</p>
 <ul>
 <li>La partie entière est composée de puissances de 2 positives;</li>
-<li>La partie après la virgule (ou le point), est composée de puissances de 2 négatives.<blockquote><p>Exemple
-  \begin{align*}
-  24,53_{10} &amp;= 2 \times 10^{1} + 4 \times 10^{0} + 5 \times 10^{-1} + 3 \times 10^{-2}\\
+<li>La partie après la virgule (ou le point), est composée de puissances de 2 négatives.<blockquote><p>Exemple:\begin{align*}    24,53_{10} &amp;= 2 \times 10^{1} + 4 \times 10^{0} + 5 \times 10^{-1} + 3 \times 10^{-2}\\
   10,01_{2} &amp;= 1 \times 2^{1} + 0 \times 2^{0} + 0 \times 2^{-1} + 1 \times 2^{-2}\\
   \end{align*}</p>
 </blockquote>
 </li>
 </ul>
 <h2 id="Conversion-binaire---d&#233;cimale">Conversion binaire - d&#233;cimale<a class="anchor-link" href="#Conversion-binaire---d&#233;cimale"> </a></h2><p>Pour convertir un nombre binaire en nombre décimal, on calcule la somme des puissances de 2 positives et négatives non nulles. On rappelle quelques valeurs de puissances de 2.</p>
-<p>|$2^{1}$|$2^{0}$|$2^{-1}$|$2^{-2}$|$2^{-3}$|$2^{-4}$|$2^{-5}$|
-|:-----:|:-----:|:------:|:------:|:------:|:------:|:------:||$2$|$1$|$0,5$|$0,25$|$0,125$|$0,0625$|$0,03125$|</p>
+<table>
+<thead><tr>
+<th style="text-align:center">$2^{1}$</th>
+<th style="text-align:center">$2^{0}$</th>
+<th style="text-align:center">$2^{-1}$</th>
+<th style="text-align:center">$2^{-2}$</th>
+<th style="text-align:center">$2^{-3}$</th>
+<th style="text-align:center">$2^{-4}$</th>
+<th style="text-align:center">$2^{-5}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$2$</td>
+<td style="text-align:center">$1$</td>
+<td style="text-align:center">$0,5$</td>
+<td style="text-align:center">$0,25$</td>
+<td style="text-align:center">$0,125$</td>
+<td style="text-align:center">$0,0625$</td>
+<td style="text-align:center">$0,03125$</td>
+</tr>
+</tbody>
+</table>
 <blockquote><h4 id="Exemple">Exemple<a class="anchor-link" href="#Exemple"> </a></h4><p>Conversion du nombre binaire $1,01_{2}$ en base $10$.<br />
 $1,01_{2}=1 \times 2^{0} + 0 \times 2^{-1} + 1 \times 2^{-2} = 1+0+0,25 = 1,25_{10}$</p>
 </blockquote>
@@ -161,15 +180,15 @@ $1,01_{2}=1 \times 2^{0} + 0 \times 2^{-1} + 1 \times 2^{-2} = 1+0+0,25 = 1,25_{
 <h3 id="M&#233;thode">M&#233;thode<a class="anchor-link" href="#M&#233;thode"> </a></h3><p>Pour convertir un nombre en écriture décimale en binaire (cas le plus fréquent puisque nous saisissons des nombres en base 10), nous procédons en deux temps.</p>
 <ol>
 <li>Conversion de la partier entière avec la méthode des soustractions ou divisions successives;</li>
-<li>Conversion de la partie après la vigule par multiplications par 2 successives. Après chaque multiplication par 2, on retire la partie entière obtenue et on recommence  jusqu'à obtenir la valeur 1.<blockquote><p>Exemple<br />
-Conversion du nombre $3,875$ en binaire:1. La partie entière : $3_{10}=11_{2}$2. La partie après la virgule : 
+<li>Conversion de la partie après la vigule par multiplications par 2 successives. Après chaque multiplication par 2, on retire la partie entière obtenue et on recommence  jusqu'à obtenir la valeur 1.<blockquote><p>Exemple:Conversion du nombre $3,875$ en binaire:1. La partie entière : $3_{10}=11_{2}$</p>
+</blockquote>
+</li>
+<li>La partie après la virgule : 
 \begin{align*}
 0,875 \times 2 = 1,75\\
 0,75 \times 2 = 1,5\\
 0,5 \times 2 =1
-\end{align*}</p>
-</blockquote>
-</li>
+\end{align*}</li>
 </ol>
 <hr />
 <h4 id="Exercice">Exercice<a class="anchor-link" href="#Exercice"> </a></h4><p>Donner l'écriture binaire du nombre $5,6875$.</p>
