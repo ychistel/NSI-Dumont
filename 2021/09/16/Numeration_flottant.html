@@ -8,15 +8,15 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Les nombres à virgule" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Un blog regroupant les documents réalisés avec des Jupyter Notebooks." />
-<meta property="og:description" content="Un blog regroupant les documents réalisés avec des Jupyter Notebooks." />
+<meta name="description" content="La notation des flottants, les nombres réels, en binaire." />
+<meta property="og:description" content="La notation des flottants, les nombres réels, en binaire." />
 <link rel="canonical" href="https://ychistel.github.io/NSI-Dumont/2021/09/16/Numeration_flottant.html" />
 <meta property="og:url" content="https://ychistel.github.io/NSI-Dumont/2021/09/16/Numeration_flottant.html" />
 <meta property="og:site_name" content="Numérique et Science Informatique" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-09-16T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2021-09-16T00:00:00-05:00","url":"https://ychistel.github.io/NSI-Dumont/2021/09/16/Numeration_flottant.html","@type":"BlogPosting","headline":"Les nombres à virgule","dateModified":"2021-09-16T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ychistel.github.io/NSI-Dumont/2021/09/16/Numeration_flottant.html"},"description":"Un blog regroupant les documents réalisés avec des Jupyter Notebooks.","@context":"https://schema.org"}</script>
+{"datePublished":"2021-09-16T00:00:00-05:00","url":"https://ychistel.github.io/NSI-Dumont/2021/09/16/Numeration_flottant.html","@type":"BlogPosting","headline":"Les nombres à virgule","dateModified":"2021-09-16T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ychistel.github.io/NSI-Dumont/2021/09/16/Numeration_flottant.html"},"description":"La notation des flottants, les nombres réels, en binaire.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/NSI-Dumont/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ychistel.github.io/NSI-Dumont/feed.xml" title="Numérique et Science Informatique" /><link rel="shortcut icon" type="image/x-icon" href="/NSI-Dumont/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -87,13 +87,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Les nombres à virgule</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-16T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Les nombres à virgule</h1><p class="page-description">La notation des flottants, les nombres réels, en binaire.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-16T00:00:00-05:00" itemprop="datePublished">
         Sep 16, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -133,6 +133,29 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Dans les langages de programmation comme Python, les nombres à virgule sont appelés des flottants et se notent avec un point. Par exemple, le nombre $2,5$ se note $2.5$.</p>
+<ul>
+<li>La partie entière est composée de puissances de 2 positives;</li>
+<li>La partie après la virgule (ou le point), est composée de puissances de 2 négatives.<blockquote><p>Exemple
+  \begin{align*}
+  24,53_{10} &amp;= 2 \times 10^{1} + 4 \times 10^{0} + 5 \times 10^{-1} + 3 \times 10^{-2}\\
+  10,01_{2} &amp;= 1 \times 2^{1} + 0 \times 2^{0} + 0 \times 2^{-1} + 1 \times 2^{-2}\\
+  \end{align*}</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Conversion-binaire---d&#233;cimale">Conversion binaire - d&#233;cimale<a class="anchor-link" href="#Conversion-binaire---d&#233;cimale"> </a></h2><p>Pour convertir un nombre binaire en nombre décimal, on calcule la somme des puissances de 2 positives et négatives non nulles. On rappelle quelques valeurs de puissances de 2.</p>
+<p>|$2^{1}$|$2^{0}$|$2^{-1}$|$2^{-2}$|$2^{-3}$|$2^{-4}$|$2^{-5}$|
+|:-----:|:-----:|:------:|:------:|:------:|:------:|:------:||$2$|$1$|$0,5$|$0,25$|$0,125$|$0,0625$|$0,03125$|</p>
+<blockquote><h4 id="Exemple">Exemple<a class="anchor-link" href="#Exemple"> </a></h4><p>Conversion du nombre binaire $1,01_{2}$ en base $10$.<br />
+$1,01_{2}=1 \times 2^{0} + 0 \times 2^{-1} + 1 \times 2^{-2} = 1+0+0,25 = 1,25_{10}$</p>
+</blockquote>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="M&#233;thode">M&#233;thode<a class="anchor-link" href="#M&#233;thode"> </a></h3><p>Pour convertir un nombre en écriture décimale en binaire (cas le plus fréquent puisque nous saisissons des nombres en base 10), nous procédons en deux temps.</p>
