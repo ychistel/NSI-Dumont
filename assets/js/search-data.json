@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Composer avec fastai",
-            "content": "Modifier la citatation important . Dans le dossier _includes, on retrouve le template importatnt.html qui permet d&#39;afficher la citation répertoriée important. . . Attention: 1. numero 1 2. numero 2 . Info:ceci est une Info! . info:ceci est une info! .",
+            "content": "Modifier la citatation important . Dans le dossier _includes, on retrouve le template importatnt.html qui permet d&#39;afficher la citation répertoriée important. . . Important: . 1. numero 1 2. numero 2 . Info:ceci est une Info! . info:ceci est une info! .",
             "url": "https://ychistel.github.io/NSI-Dumont/2021/09/16/Composer-avec-fastpage.html",
             "relUrl": "/2021/09/16/Composer-avec-fastpage.html",
             "date": " • Sep 16, 2021"
