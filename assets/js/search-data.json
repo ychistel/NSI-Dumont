@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Composer avec fastai",
-            "content": "Modifier la citation important . Dans le dossier _includes, on retrouve le template important.html qui permet d&#39;afficher la citation répertoriée important. . . Attention: 1. numero 1 2. numero 2 . . Attention: ceci est une alerte! on écrit sur plusieurs lignes. Reste à savoir si tout est écrit dans la même div. . Avec un saut de ligne en prime! . . You can include info boxes on écrit sur plusieurs lignes. Reste à savoir si tout est écrit dans la même div. .",
+            "content": "Modifier la citation important . Dans le dossier _includes, on retrouve le template important.html qui permet d&#39;afficher la citation répertoriée important. . . Tip: un exercice . . Attention: ceci est une alerte! on écrit sur plusieurs lignes. Reste à savoir si tout est écrit dans la même div. . Avec un saut de ligne en prime! . . You can include info boxes on écrit sur plusieurs lignes. Reste à savoir si tout est écrit dans la même div. .",
             "url": "https://ychistel.github.io/NSI-Dumont/2021/09/16/Composer-avec-fastpage.html",
             "relUrl": "/2021/09/16/Composer-avec-fastpage.html",
             "date": " • Sep 16, 2021"
